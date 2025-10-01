@@ -4,39 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Семестровая работа</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Практики</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
+    <div class="page-container">
+        <div class="header">Товары</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
     </div>
 
-    <div id="content">
-        <div>
-            <p>
-                <img src="../images/goods1.jpg"  width="200" height="250">
-                <br>Товар 1<br>
-                Цена 1<br>
-            </p>
-            <p>
-                <img src="../images/goods2.jpg"  width="200" height="250">
-                <br>Товар 2<br>
-                Цена 2<br>
-            </p>
-            <p>
-                <img src="../images/goods3.jpg"  width="200" height="250">
-                <br>Товар 3<br>
-                Цена 3<br>
-            </p>
-        </div>
-    </div>
+    <div class="content">
 
-    <div id="footer">Футер</div>
+        <div class="experience-section">
+            <div class="goods-card">
+                    <img class="goods-photo" src="../images/goods1.jpg">
+                    <div class="goods-gr" >
+                        <p class="experience-title">Товар 1 </p>
+                        <h3 class="experience-title">Цена 1</h3>
+                        <p class="goods-desc">Описание 1. </p>
+                    </div>
+            </div>
+            <div class="goods-card">
+                <img class="goods-photo" src="../images/goods2.jpg">               
+                <div class="goods-gr">
+                    <p class="experience-title">Товар 2 </p>
+                    <h3 class="experience-title">Цена 2</h3>
+                    <p class="goods-desc">Описание 2. </p>
+                </div>
+            </div>
+            <div class="goods-card">
+                <img class="goods-photo" src="../images/goods3.jpg" >
+                <div class="goods-gr">
+                    <p class="experience-title">Товар 3 </p>
+                    <h3 class="experience-title">Цена 3</h3>
+                    <p class="goods-desc">Описание 3. </p>
+                </div> 
+            </div>
+        </div>            
+    </div>
+    <div class="footer">Футер</div>
 </body>
 </html>
