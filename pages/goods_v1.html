@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <script src="script.js"></script>
+</head>
+<body class="light bd">
+    
+    <div class="page-container">
+        <header class="header"><h1>Товары</h1></header>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <button class="btn btn-theme"></button>
+            </ul>
+        </nav>
+
+        <main class="content">
+
+            <section class="goods-section">
+                <div class="goods-card-grid">
+                        <img class="goods-photo" src="../images/goods1.jpg">
+                        <div class="goods-gr" >
+                            <p class="experience-title">Циркуль разметочный</p>
+                            <h3 class="experience-title">186,7 рубля</h3>
+                            <p class="goods-desc">Максимальный радиус окружности - 8 см</p>
+                        </div>
+                </div>
+                <div class="goods-card-grid">
+                    <img class="goods-photo" src="../images/goods2.jpg">               
+                    <div class="goods-gr">
+                        <p class="experience-title">Сказки народов СССР </p>
+                        <h3 class="experience-title">1 р. 60 коп.</h3>
+                        <p class="goods-desc">453 стр. Белорусские, туркменские, и многие другие сказки! </p>
+                    </div>
+                </div>
+                <div class="goods-card-grid goods-card-grid--sale">
+                    <img class="goods-photo" src="../images/goods3.jpg" >
+                    <div class="goods-gr">
+                        <p class="stripe">Подешевело! </p>
+                        <p class="experience-title">Детский фартук (для рисования). </p>
+                        <h3 class="experience-title experience-title--saleprev">540 рублей</h3>
+                        <h3 class="experience-title experience-title--salenuev">500 рублей</h3>
+                        <p class="goods-desc">Водонепроницаемый, легко отмывается. </p>
+                    </div> 
+                </div>
+                
+            </section>            
+        </main>
+        <div class="footer">Футер</div>
+    </div>
+    <script>
+        const goodsCards = document.querySelectorAll('.goods-card-grid');
+        
+        goodsCards.forEach(card => {
+            let isMoved = false;
+
+            card.addEventListener('click', function() {
+                if (!isMoved) {
+                    card.classList.add('moved');
+                    isMoved = true;
+                } else {
+                    card.classList.remove('moved');
+                    isMoved = false;
+                }
+            });
+        });
+    </script>    
+</body>
+</html>
