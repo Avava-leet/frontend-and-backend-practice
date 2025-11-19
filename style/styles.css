@@ -1,5 +1,7 @@
-:root,
+:root ,
+
 .light{
+    font-size: 20px;
     --color-darkerblue: #eec230; /* var(--color-darkerblue) */
     --color-border: #f7b322; /* var(--color-border) */
     --color-border-grad2: #cc4608; /* var(--color-border-grad2) */
@@ -13,6 +15,7 @@
     --color-inpc: #f7b322; /* var(--color-inpc) */
     --color-inpc1: #cc4608;
     --color-mov: rgb(245, 234, 219);
+    
 }
 .dark{
     --color-darkerblue: #401d57; /* var(--color-darkerblue) */
@@ -37,6 +40,7 @@
     padding: 0; /* Убираем стандартные внутренние отступы */
     background: linear-gradient(135deg, var(--color-border) 0%, var(--color-border-grad2) 100%); /* Красивый градиентный фон всей страницы */ 
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */ 
+    
 } 
 
 /* **КОНТЕЙНЕР СТРАНИЦЫ*******/ 
@@ -276,7 +280,7 @@ main.content {
     }
 .goods-card-grid{ 
     display: grid;
-    grid-template-columns: 220px 800px;
+    grid-template-columns: 1fr 8fr;
     gap: 15px;
     margin: 20px 0;
     background: var(--color-pc); /* Белый фон карточки */ 

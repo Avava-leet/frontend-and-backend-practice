@@ -96,7 +96,7 @@
                     </div>
                     <div class="modal-actions">
                         <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
-                        <button type="submit" class="btn btn-secondary">Отмена</button>
+                        <button type="submit" class="btn btn-secondary" onclick="closeModal('contactModal')">Отмена</button>
                         <!-- Кнопка отправки с обработкой через JavaScript -->
                         <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
                     </div>
@@ -106,6 +106,9 @@
 
         <script>
             // Функция для отправки формы
+            function closeModal(modalId) {
+                document.getElementById(modalId).close();
+            }
             function submitForm() {
                 const form = document.getElementById('feedbackForm');
                 const formData = new FormData(form);
@@ -144,7 +147,6 @@
                     this.close();
                 }
             });
-
             // Обработка отправки формы через Enter (предотвращаем стандартное поведение)
             document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
                 if (event.key === 'Enter' && event.target.type !== 'textarea') {
